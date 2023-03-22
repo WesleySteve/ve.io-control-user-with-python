@@ -35,6 +35,7 @@ profile = "black"
 line_length = "79"
 
 [tool.taskipy.tasks]
-lint = "black"
+lint = "black ."
 docs = "mkdocs serve"
 pre_test = "task lint"
+test = "pytest -s -v tests/"
