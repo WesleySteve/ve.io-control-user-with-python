@@ -8,6 +8,7 @@ packages = [{include = "base_project_for_python"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pre-commit = "^3.2.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -21,3 +22,19 @@ pylint = "^2.17.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini.options]
+pythonpath = "tests/"
+addopts = "--doctest-modules"
+
+[tool.black]
+line_length = "79"
+
+[tool.isort]
+profile = "black"
+line_length = "79"
+
+[tool.taskipy.tasks]
+lint = "black"
+docs = "mkdocs serve"
+pre_test = "task lint"
