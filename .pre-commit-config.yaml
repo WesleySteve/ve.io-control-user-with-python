@@ -15,6 +15,22 @@ repos:
     hooks:
       - id: black
     language_version: python3.10
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        language: system
+        entry: pytest -s -v tests/
+        types: [python]
+        pass_filenames: false
+        always_run: true
+      - id: pytest-cov
+        name: pytest-cov
+        language: system
+        entry: pytest -v --cov=ethosu --cov-fail-under=0
+        types: [python]
+        pass_filenames: false
+        always_run: true
   - repo: https://github.com/pycqa/flake8
     rev: 6.0.0
     hooks:
