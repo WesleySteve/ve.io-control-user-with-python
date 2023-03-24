@@ -18,6 +18,7 @@ isort = "^5.12.0"
 taskipy = "^1.10.3"
 pylint = "^2.17.0"
 pre-commit = "^3.2.0"
+behave = "^1.2.6"
 
 
 [build-system]
@@ -38,5 +39,6 @@ line_length = "79"
 [tool.taskipy.tasks]
 lint = "black ."
 docs = "mkdocs serve"
+behave = "behave tests/bdd/features/"
 pre_test = "task lint"
 test = "pytest -s -v tests/"
