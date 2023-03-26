@@ -6,3 +6,6 @@
 
 ### Package management tool
 - Poetry
+
+### Where to find the tool
+- https://github.com/python-poetry/poetry
