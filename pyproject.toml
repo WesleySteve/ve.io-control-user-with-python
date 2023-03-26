@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "ve.io-base-project-for-python"
+name = "ve.io-base-project-for-python-with-clean-arch"
 version = "0.1.0"
 description = ""
 authors = ["Wesley Steve <wesley.silva23@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "base_project_for_python"}]
+packages = [{include = "base_project_for_python_with-clean-arch"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

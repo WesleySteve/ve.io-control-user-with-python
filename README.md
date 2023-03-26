@@ -1,3 +1,4 @@
-# ve.io-base_project_for_python
+# ve.io-base_project_for_python-with-clean-arch
 
-- This project aims to serve as a basis for the development of other projects.
+- The objetive of this project is to present a proposal for a base structure 
+  for python projects using clean architecture as a base.
