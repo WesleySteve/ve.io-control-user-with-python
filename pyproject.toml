@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "base-project-for-python"
+name = "ve.io-base-project-for-python"
 version = "0.1.0"
 description = ""
 authors = ["Wesley Steve <wesley.silva23@hotmail.com>"]
