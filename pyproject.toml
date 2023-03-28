@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Wesley Steve <wesley.silva23@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "base_project_for_python_with-clean-arch"}]
+packages = [{include = "base_project_for_python_with_clean_arch"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
