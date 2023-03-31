@@ -1,19 +1,10 @@
-from abc import ABCMeta, abstractmethod
-
-
 from control_user_with_python.domain.intefaces.users.register_repo import (
     RegisterUserRepositoryInterface,
 )
 
-
-class RegisterUserInterface(metaclass=ABCMeta):
-    """RegisterUserInterface"""
-
-    @abstractmethod
-    def register(
-        self, name: str, email: str, password: str, repeat_password: str
-    ):
-        pass
+from control_user_with_python.domain.use_cases.users.register import (
+    RegisterUserInterface,
+)
 
 
 class RegisterUser(RegisterUserInterface):
