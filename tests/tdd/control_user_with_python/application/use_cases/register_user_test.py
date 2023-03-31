@@ -41,6 +41,8 @@ class RegisterUserRepositorySpy(RegisterUserRepositoryInterface):
     password: str
     repeat_password: str
 
+    callsCount: int = 0
+
     def register(
         self, name: str, email: str, password: str, repeat_password: str
     ):
@@ -50,6 +52,8 @@ class RegisterUserRepositorySpy(RegisterUserRepositoryInterface):
         self.email = email
         self.password = password
         self.repeat_password = repeat_password
+
+        self.callsCount += 1
 
 
 def test_should_be_return_200_when_user_register_sucessfully():
@@ -75,3 +79,4 @@ def test_should_be_return_200_when_user_register_sucessfully():
     assert register_user_repository.email == email
     assert register_user_repository.password == password
     assert register_user_repository.repeat_password == repeat_password
+    assert register_user_repository.callsCount == 1
