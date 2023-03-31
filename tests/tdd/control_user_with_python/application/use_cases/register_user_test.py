@@ -56,6 +56,18 @@ class RegisterUserRepositorySpy(RegisterUserRepositoryInterface):
         self.callsCount += 1
 
 
+def make_sut():
+    """Make SUT"""
+
+    register_user_reposutory = RegisterUserRepositorySpy()
+    sut = RegisterUser(register_user_repository=register_user_reposutory)
+
+    return {
+        register_user_reposutory: RegisterUserRepositorySpy,
+        sut: RegisterUser,
+    }
+
+
 def test_should_be_return_200_when_user_register_sucessfully():
     """Test Register User Successfully"""
 
@@ -64,9 +76,7 @@ def test_should_be_return_200_when_user_register_sucessfully():
     password = "any_password"
     repeat_password = "any_password"
 
-    register_user_repository = RegisterUserRepositorySpy()
-
-    sut = RegisterUser(register_user_repository)
+    register_user_repository, sut = make_sut()
 
     sut.register(
         name=name,
