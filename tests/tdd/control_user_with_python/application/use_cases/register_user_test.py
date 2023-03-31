@@ -12,7 +12,17 @@ class RegisterUserRepositoryInterface(metaclass=ABCMeta):
         pass
 
 
-class RegisterUser:
+class RegisterUserInterface(metaclass=ABCMeta):
+    """RegisterUserInterface"""
+
+    @abstractmethod
+    def register(
+        self, name: str, email: str, password: str, repeat_password: str
+    ):
+        pass
+
+
+class RegisterUser(RegisterUserInterface):
     """RegisterUser"""
 
     def __init__(
